@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-sima-purple: #8A2BE2;
+  --color-sima-cyan: #00FFFF;
+  --color-sima-bg: #020204;
+  --color-sima-surface: rgba(255, 255, 255, 0.03);
+  --color-sima-border: rgba(255, 255, 255, 0.1);
+  
+  --font-display: var(--font-space);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow-pulse: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 10px rgba(138,43,226, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(138,43,226, 0.6); }
+  100% { box-shadow: 0 0 10px rgba(138,43,226, 0.2); }
+}
+
+body {
+  background-color: var(--color-sima-bg);
+  color: white;
+  overflow-x: hidden;
+}
+
+.glass-panel {
+  background: var(--color-sima-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-sima-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #a855f7, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
